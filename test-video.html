@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Test - Plyr.io Player</title>
+    <!-- 1. 引入 Plyr 的 CSS 样式文件 -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+<body>
+    <h1>Video Test with Plyr.io Player</h1>
+
+    <!-- 2. 放置一个标准的 video 标签 -->
+    <video id="player" playsinline controls>
+        <source src="videos/bunny-HiNeRV-base-ms0.3MB-bpp0.371-PSNR35.294dB.mp4" type="video/mp4" />
+    </video>
+
+    <!-- 3. 引入 Plyr 的 JS 文件 -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+        // 4. 初始化 Plyr 播放器，就这么简单！
+        const player = new Plyr('#player');
+    </script>
+</body>
+</html>
