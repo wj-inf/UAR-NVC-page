@@ -163,6 +163,13 @@ li {
     min-width: 300px;
 }
 
+.image-row .fig3-container {
+    flex: 5;
+}
+
+.image-row .fig4-container {
+    flex: 3;
+}
 /* Table styles */
 .table-container {
     margin: 40px 0;
@@ -257,6 +264,14 @@ footer {
     th, td {
         padding: 8px 6px;
     }
+    
+    .contributions-and-fig1 {
+        flex-direction: column;
+    }
+    
+    .figure-container, .contributions-container {
+        min-width: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -309,9 +324,90 @@ footer {
     max-width: 90%;
 }
 
-/* Mobile image adjustments */
-@media (max-width: 768px) {
-    .image-container img {
-        max-width: 95% !important;
-    }
+/* Contributions and Figure 1 side by side */
+.contributions-and-fig1 {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: flex-start;
+}
+
+.figure-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contributions-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Remove special sizing for Figure 1 as it's now in a different context */
+#method .image-container:nth-child(1) img { /* Figure 1 */
+    max-width: 100%;
+}
+
+/* === NEW STYLES FOR SIMPLE VIDEO PLAYER === */
+
+/* Video player section */
+.video-player-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.video-player-section h2 {
+    margin-bottom: 20px;
+}
+
+.video-player-section p {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+/* Video container */
+.video-player-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.video-player-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Video switch buttons */
+.video-switch-buttons {
+    margin-top: 15px;
+}
+
+.video-switch-button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.video-switch-button:hover {
+    background-color: #1c5a8a;
+    transform: translateY(-2px);
+    filter: brightness(1.1); /* 让它在悬停时变得更亮一点 */
+}
+
+.video-switch-button:active {
+    transform: translateY(0);
+}
+
+.video-switch-button.active {
+    background-color: #1c5a8a;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
 }
